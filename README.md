@@ -7,3 +7,9 @@
    pip install qt5-tools
    ```
 3. Open the given `.ui` file in Qt designer app, which should be somewhere in `lib -> site-packages -> bin -> qt5-applications -> Qt -> bin` in virtual environment
+
+## To-do's:
+- [] Do some styling
+- [] Add options of file extensions
+- [] Display file system (XFS/Btrfs) after detecting
+- [] Make buttons, scroll bars and checkboxes functional
