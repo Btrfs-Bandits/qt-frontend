@@ -10,7 +10,7 @@
 
 ## To-do's:
 - [ ] Do some styling
-- [ ] Add options of file extensions
+- [x] Add options of file extensions
 - [ ] Display file system (XFS/Btrfs) after detecting
 - [ ] Make buttons, scroll bars and checkboxes functional
 - [ ] Main question - check for responsiveness in bigger window
