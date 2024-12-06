@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>807</width>
+    <width>1048</width>
     <height>642</height>
    </rect>
   </property>
@@ -252,7 +252,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>350</x>
       <y>10</y>
       <width>331</width>
       <height>51</height>
@@ -276,9 +276,9 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>70</y>
-      <width>701</width>
+      <x>0</x>
+      <y>60</y>
+      <width>1041</width>
       <height>471</height>
      </rect>
     </property>
@@ -358,7 +358,7 @@
         </brush>
        </colorrole>
        <colorrole role="PlaceholderText">
-        <brush brushstyle="NoBrush">
+        <brush brushstyle="SolidPattern">
          <color alpha="128">
           <red>255</red>
           <green>255</green>
@@ -441,7 +441,7 @@
         </brush>
        </colorrole>
        <colorrole role="PlaceholderText">
-        <brush brushstyle="NoBrush">
+        <brush brushstyle="SolidPattern">
          <color alpha="128">
           <red>255</red>
           <green>255</green>
@@ -524,7 +524,7 @@
         </brush>
        </colorrole>
        <colorrole role="PlaceholderText">
-        <brush brushstyle="NoBrush">
+        <brush brushstyle="SolidPattern">
          <color alpha="128">
           <red>255</red>
           <green>255</green>
@@ -652,7 +652,7 @@ background-color: rgb(55, 65, 81);</string>
       <rect>
        <x>330</x>
        <y>60</y>
-       <width>341</width>
+       <width>451</width>
        <height>381</height>
       </rect>
      </property>
@@ -667,14 +667,14 @@ background-color: rgb(55, 65, 81);</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>339</width>
+        <width>449</width>
         <height>379</height>
        </rect>
       </property>
       <widget class="QScrollBar" name="verticalScrollBar">
        <property name="geometry">
         <rect>
-         <x>320</x>
+         <x>430</x>
          <y>0</y>
          <width>16</width>
          <height>381</height>
@@ -796,6 +796,63 @@ background-color: rgb(55, 65, 81);</string>
       <bool>false</bool>
      </property>
     </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>10</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Montserrat SemiBold</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Ask AI For Help</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="chatOutput">
+     <property name="geometry">
+      <rect>
+       <x>813</x>
+       <y>60</y>
+       <width>221</width>
+       <height>321</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="chatInput">
+     <property name="geometry">
+      <rect>
+       <x>813</x>
+       <y>393</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chatSubmit">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>400</y>
+       <width>51</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Submit</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -803,8 +860,8 @@ background-color: rgb(55, 65, 81);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>807</width>
-     <height>22</height>
+     <width>1048</width>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuHelp">
