@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from groq import Groq 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -326,6 +326,35 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        self.chatSubmit.clicked.connect(self.handleChatSubmit)
+
+    def handleChatSubmit(self):
+        user_input = self.chatInput.toPlainText().strip()
+        if not user_input:
+            self.chatOutput.setPlainText("Please enter a message.")
+            return
+        
+        client = Groq(
+            api_key="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" # hehe
+        )
+        
+        try:
+            prefix="you are a file recovery tool for btrfs and xfs file system designed by team btrfs-bandits from IIT-KGP. Users wiil ask you for your help in revovey of files and how this recovery works or the file system works. help the users with it. the following is user's promt:-"
+            chat_completion = client.chat.completions.create(
+                messages=[
+                    {"role": "user", "content": prefix + user_input}
+                ],
+                model="llama3-8b-8192",
+                stream=False,
+            )
+            
+            response_content = chat_completion.choices[0].message.content
+            self.chatOutput.setPlainText(response_content)
+        
+        except Exception as e:
+            self.chatOutput.setPlainText(f"An error occurred: {str(e)}")
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
