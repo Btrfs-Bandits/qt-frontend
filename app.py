@@ -640,7 +640,14 @@ class Ui_MainWindow(object):
         else:
             self.pattern = "" 
         
-        self.startRecoverbtn.clicked.connect(utils.run_recover_script(self.diskLocationInput.text(),self.recoveryPathInput.text(),self.pattern,"recover"))
+        self.startRecoverbtn.clicked.connect(
+    lambda: utils.run_recover_script(
+        self.diskLocationInput.toPlainText(),
+        self.recoveryPathInput.toPlainText(),
+        self.pattern,
+        "recover"
+    )
+)
 
 import resources
 
