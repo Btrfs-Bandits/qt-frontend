@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from groq import Groq 
 import utils
 
 
@@ -358,10 +359,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.Homelabel.setFont(font)
         self.Homelabel.setObjectName("Homelabel")
-        self.FileSystemBtn = QtWidgets.QPushButton(self.page)
-        self.FileSystemBtn.setGeometry(QtCore.QRect(90, 0, 171, 41))
-        self.FileSystemBtn.setStyleSheet("border-radius: 10px;")
-        self.FileSystemBtn.setObjectName("FileSystemBtn")
+        # self.FileSystemBtn = QtWidgets.QPushButton(self.page)
+        # self.FileSystemBtn.setGeometry(QtCore.QRect(90, 0, 171, 41))
+        # self.FileSystemBtn.setStyleSheet("border-radius: 10px;")
+        # self.FileSystemBtn.setObjectName("FileSystemBtn")
         self.stackedWidget = QtWidgets.QStackedWidget(self.page)
         self.stackedWidget.setGeometry(QtCore.QRect(0, 370, 531, 291))
         self.stackedWidget.setStyleSheet("background-color: #1f232a;")
@@ -419,6 +420,7 @@ class Ui_MainWindow(object):
         self.typeLabel.setObjectName("typeLabel")
         self.fileTypesInputSelect = QtWidgets.QComboBox(self.page)
         self.fileTypesInputSelect.setGeometry(QtCore.QRect(120, 190, 241, 41))
+        self.fileTypesInputSelect.setStyleSheet("background-color: #1f232a;")
         self.fileTypesInputSelect.setCurrentText("")
         self.fileTypesInputSelect.setObjectName("fileTypesInputSelect")
         self.fileTypesInputSelect.addItem("")
@@ -597,7 +599,7 @@ class Ui_MainWindow(object):
         self.minimizeBtn.setToolTip(_translate("MainWindow", "Minimize Window"))
         self.closeBtn.setToolTip(_translate("MainWindow", "CloseWindow"))
         self.Homelabel.setText(_translate("MainWindow", "Home"))
-        self.FileSystemBtn.setText(_translate("MainWindow", "Identify the file System"))
+        # self.FileSystemBtn.setText(_translate("MainWindow", "Identify the file System"))
         self.label_2.setText(_translate("MainWindow", "This is a file-recovery software."))
         self.Analysinglabel.setText(_translate("MainWindow", "Analysing..."))
         self.RecoveryLabel.setText(_translate("MainWindow", "Recovery in progress..."))
@@ -620,6 +622,34 @@ class Ui_MainWindow(object):
         self.label_10.setText(_translate("MainWindow", "Logs"))
         self.askAiBtn.setToolTip(_translate("MainWindow", "close menu"))
         self.askAiBtn.setText(_translate("MainWindow", "Ask AI for Help"))
+
+        self.chatSend.clicked.connect(self.handleChatSend)
+
+    def handleChatSend(self):
+        user_input = self.chatInput.toPlainText().strip()
+        if not user_input:
+            self.chatOutput.setPlainText("Please enter a message.")
+            return
+        
+        client = Groq(
+        api_key="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" # hehe
+        )
+        
+        try:
+            prefix="you are a file recovery tool for btrfs and xfs file system designed by team btrfs-bandits from IIT-KGP. Users wiil ask you for your help in revovey of files and how this recovery works or the file system works. help the users with it. the following is user's promt:-"
+            chat_completion = client.chat.completions.create(
+            messages=[
+                {"role": "user", "content": prefix + user_input}
+            ],
+            model="llama3-8b-8192",
+            stream=False,
+            )
+            
+            response_content = chat_completion.choices[0].message.content
+            self.chatOutput.setPlainText(response_content)
+        
+        except Exception as e:
+            self.chatOutput.setText(f"An error occurred: {str(e)}")
 
         def paternFind(self):
             index = self.fileTypesInputSelect.currentIndex()
