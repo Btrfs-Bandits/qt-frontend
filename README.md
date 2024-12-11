@@ -15,3 +15,5 @@
 - [ ] Make buttons, scroll bars and checkboxes functional
 - [ ] Main question - check for responsiveness in bigger window
 - [ ] Finally, see deployment
+
+Final (almost) code in `app.py` 
