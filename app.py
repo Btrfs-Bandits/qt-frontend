@@ -541,7 +541,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.chatInput.sizePolicy().hasHeightForWidth())
         self.chatInput.setSizePolicy(sizePolicy)
         self.chatInput.setStyleSheet("background-color: #ffffff;\n"
-"color: white;\n"
+"color: black;\n"
 "border-radius: 25px;")
         self.chatInput.setObjectName("chatInput")
         self.chatSend = QtWidgets.QPushButton(self.AskAI)
