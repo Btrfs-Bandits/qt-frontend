@@ -2,3 +2,4 @@ qt-frontend-env/
 __pycache__/
 /recovered
 output.txt
+venv/
