@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>989</width>
-    <height>769</height>
+    <height>763</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -699,7 +699,7 @@ border-radius: 10px;
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_11">
                 <item>
-                 <widget class="QStackedWidget" name="stackedWidget_2">
+                 <widget class="QStackedWidget" name="Window">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -713,7 +713,7 @@ border-radius: 10px;
                    </size>
                   </property>
                   <widget class="QWidget" name="page">
-                   <widget class="QLabel" name="label_9">
+                   <widget class="QLabel" name="Homelabel">
                     <property name="geometry">
                      <rect>
                       <x>20</x>
@@ -733,11 +733,11 @@ border-radius: 10px;
                      <string>Home</string>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="pushButton_2">
+                   <widget class="QPushButton" name="FileSystemBtn">
                     <property name="geometry">
                      <rect>
-                      <x>30</x>
-                      <y>60</y>
+                      <x>320</x>
+                      <y>180</y>
                       <width>171</width>
                       <height>41</height>
                      </rect>
@@ -749,97 +749,13 @@ border-radius: 10px;
                      <string>Identify the file System</string>
                     </property>
                    </widget>
-                   <widget class="QLabel" name="label">
-                    <property name="geometry">
-                     <rect>
-                      <x>30</x>
-                      <y>130</y>
-                      <width>221</width>
-                      <height>19</height>
-                     </rect>
-                    </property>
-                    <property name="text">
-                     <string>Filter the type of files to recover</string>
-                    </property>
-                   </widget>
-                   <widget class="QComboBox" name="comboBox">
-                    <property name="geometry">
-                     <rect>
-                      <x>30</x>
-                      <y>160</y>
-                      <width>211</width>
-                      <height>16</height>
-                     </rect>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>Text-based documents</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Archive </string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Image-based documents</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Executables binaries</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Scripts files</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Database files</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Recover all</string>
-                     </property>
-                    </item>
-                   </widget>
-                   <widget class="QPushButton" name="pushButton_3">
-                    <property name="geometry">
-                     <rect>
-                      <x>40</x>
-                      <y>250</y>
-                      <width>171</width>
-                      <height>27</height>
-                     </rect>
-                    </property>
-                    <property name="text">
-                     <string>Start Recovery process</string>
-                    </property>
-                   </widget>
-                   <widget class="QPushButton" name="pushButton_6">
-                    <property name="geometry">
-                     <rect>
-                      <x>250</x>
-                      <y>250</y>
-                      <width>87</width>
-                      <height>27</height>
-                     </rect>
-                    </property>
-                    <property name="text">
-                     <string>Preview</string>
-                    </property>
-                   </widget>
                    <widget class="QStackedWidget" name="stackedWidget">
                     <property name="geometry">
                      <rect>
                       <x>0</x>
-                      <y>340</y>
+                      <y>370</y>
                       <width>531</width>
-                      <height>321</height>
+                      <height>291</height>
                      </rect>
                     </property>
                     <property name="styleSheet">
@@ -849,10 +765,10 @@ border-radius: 10px;
                      <widget class="QLabel" name="label_2">
                       <property name="geometry">
                        <rect>
-                        <x>50</x>
-                        <y>19</y>
-                        <width>271</width>
-                        <height>71</height>
+                        <x>30</x>
+                        <y>20</y>
+                        <width>211</width>
+                        <height>31</height>
                        </rect>
                       </property>
                       <property name="text">
@@ -861,11 +777,11 @@ border-radius: 10px;
                      </widget>
                     </widget>
                     <widget class="QWidget" name="Analysing">
-                     <widget class="QLabel" name="label_3">
+                     <widget class="QLabel" name="Analysinglabel">
                       <property name="geometry">
                        <rect>
-                        <x>50</x>
-                        <y>40</y>
+                        <x>30</x>
+                        <y>20</y>
                         <width>66</width>
                         <height>19</height>
                        </rect>
@@ -876,25 +792,25 @@ border-radius: 10px;
                      </widget>
                     </widget>
                     <widget class="QWidget" name="Recovering">
-                     <widget class="QLabel" name="label_4">
+                     <widget class="QLabel" name="RecoveryLabel">
                       <property name="geometry">
                        <rect>
-                        <x>70</x>
-                        <y>70</y>
+                        <x>20</x>
+                        <y>20</y>
                         <width>151</width>
                         <height>19</height>
                        </rect>
                       </property>
                       <property name="text">
-                       <string>Recovery in progres...</string>
+                       <string>Recovery in progress...</string>
                       </property>
                      </widget>
                     </widget>
                     <widget class="QWidget" name="page_3">
-                     <widget class="QLabel" name="label_5">
+                     <widget class="QLabel" name="PreviewLabel">
                       <property name="geometry">
                        <rect>
-                        <x>50</x>
+                        <x>20</x>
                         <y>10</y>
                         <width>66</width>
                         <height>19</height>
@@ -905,6 +821,202 @@ border-radius: 10px;
                       </property>
                      </widget>
                     </widget>
+                   </widget>
+                   <widget class="QLabel" name="label_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>40</y>
+                      <width>231</width>
+                      <height>17</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Montserrat Medium</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Disk Location</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                   <widget class="QTextEdit" name="textEdit_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>70</y>
+                      <width>241</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(55, 65, 81);
+color: #ffffff;</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="tabChangesFocus">
+                     <bool>true</bool>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Select disk location</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="label_5">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>150</y>
+                      <width>281</width>
+                      <height>17</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Montserrat Medium</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Filter the type of files to recover</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                   <widget class="QComboBox" name="comboBox">
+                    <property name="geometry">
+                     <rect>
+                      <x>30</x>
+                      <y>190</y>
+                      <width>241</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="currentText">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>.txt</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Text-based documents</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Archive files</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Image-based documents</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Executable binaries</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Script files</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Database</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Recover all</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </item>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>70</x>
+                      <y>270</y>
+                      <width>201</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Montserrat Medium</family>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(37, 99, 235);
+color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>Start Recovery process</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="pushButton_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>320</x>
+                      <y>270</y>
+                      <width>131</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Montserrat Medium</family>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(37, 99, 235);
+color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>Preview</string>
+                    </property>
+                   </widget>
+                   <widget class="QProgressBar" name="progressBar">
+                    <property name="geometry">
+                     <rect>
+                      <x>210</x>
+                      <y>330</y>
+                      <width>118</width>
+                      <height>23</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Montserrat Light</family>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">alternate-background-color: rgb(37, 99, 235);
+background-color: rgb(55, 65, 81);</string>
+                    </property>
+                    <property name="value">
+                     <number>20</number>
+                    </property>
                    </widget>
                   </widget>
                   <widget class="QWidget" name="page_2">
