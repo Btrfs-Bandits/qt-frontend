@@ -190,7 +190,7 @@ border-radius: 10px;
                 <string>Menu</string>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="resources.qrc">
                  <normaloff>:/icons/feather(2)/menu.svg</normaloff>:/icons/feather(2)/menu.svg</iconset>
                </property>
                <property name="iconSize">
@@ -225,7 +225,7 @@ border-radius: 10px;
                 <string> Home</string>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="resources.qrc">
                  <normaloff>:/icons/feather(2)/home.svg</normaloff>:/icons/feather(2)/home.svg</iconset>
                </property>
                <property name="iconSize">
@@ -257,7 +257,7 @@ border-radius: 10px;
                 <string> Logs</string>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="resources.qrc">
                  <normaloff>:/icons/feather(2)/printer.svg</normaloff>:/icons/feather(2)/printer.svg</iconset>
                </property>
                <property name="iconSize">
@@ -335,7 +335,7 @@ border-radius: 10px;
                 <string> Settings</string>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="resources.qrc">
                  <normaloff>:/icons/feather(2)/settings.svg</normaloff>:/icons/feather(2)/settings.svg</iconset>
                </property>
                <property name="iconSize">
@@ -367,7 +367,7 @@ border-radius: 10px;
                 <string> Info</string>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="resources.qrc">
                  <normaloff>:/icons/feather(2)/info.svg</normaloff>:/icons/feather(2)/info.svg</iconset>
                </property>
                <property name="iconSize">
@@ -516,7 +516,7 @@ border-radius: 10px;
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>:/icons/feather(2)/131-1312148_linux-start-menu-icons-removebg-preview.png</pixmap>
+                   <pixmap resource="resources.qrc">:/icons/feather(2)/131-1312148_linux-start-menu-icons-removebg-preview.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -567,7 +567,7 @@ border-radius: 10px;
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/icons/feather(2)/terminal.svg</normaloff>:/icons/feather(2)/terminal.svg</iconset>
                   </property>
                   <property name="iconSize">
@@ -587,7 +587,7 @@ border-radius: 10px;
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/icons/feather(2)/arrow-down-circle.svg</normaloff>:/icons/feather(2)/arrow-down-circle.svg</iconset>
                   </property>
                   <property name="iconSize">
@@ -619,7 +619,7 @@ border-radius: 10px;
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/icons/feather(2)/minus.svg</normaloff>:/icons/feather(2)/minus.svg</iconset>
                   </property>
                   <property name="iconSize">
@@ -639,7 +639,7 @@ border-radius: 10px;
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/icons/feather(2)/x.svg</normaloff>:/icons/feather(2)/x.svg</iconset>
                   </property>
                   <property name="iconSize">
@@ -712,6 +712,16 @@ border-radius: 10px;
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">#pushButton_2:clicked{
+background-color: rgb(153, 193, 241)
+;}
+
+#pushButton_3:clicked{
+background-color: rgb(153, 193, 241)
+;}
+</string>
+                  </property>
                   <widget class="QWidget" name="page">
                    <widget class="QLabel" name="Homelabel">
                     <property name="geometry">
@@ -736,8 +746,8 @@ border-radius: 10px;
                    <widget class="QPushButton" name="FileSystemBtn">
                     <property name="geometry">
                      <rect>
-                      <x>320</x>
-                      <y>180</y>
+                      <x>90</x>
+                      <y>0</y>
                       <width>171</width>
                       <height>41</height>
                      </rect>
@@ -872,7 +882,7 @@ color: #ffffff;</string>
                    <widget class="QLabel" name="label_5">
                     <property name="geometry">
                      <rect>
-                      <x>10</x>
+                      <x>100</x>
                       <y>150</y>
                       <width>281</width>
                       <height>17</height>
@@ -896,7 +906,7 @@ color: #ffffff;</string>
                    <widget class="QComboBox" name="comboBox">
                     <property name="geometry">
                      <rect>
-                      <x>30</x>
+                      <x>120</x>
                       <y>190</y>
                       <width>241</width>
                       <height>41</height>
@@ -949,7 +959,7 @@ color: #ffffff;</string>
                      </property>
                     </item>
                    </widget>
-                   <widget class="QPushButton" name="pushButton_2">
+                   <widget class="QPushButton" name="StartBtn">
                     <property name="geometry">
                      <rect>
                       <x>70</x>
@@ -972,7 +982,7 @@ color: rgb(255, 255, 255);</string>
                      <string>Start Recovery process</string>
                     </property>
                    </widget>
-                   <widget class="QPushButton" name="pushButton_3">
+                   <widget class="QPushButton" name="previewBtn">
                     <property name="geometry">
                      <rect>
                       <x>320</x>
@@ -1018,14 +1028,51 @@ background-color: rgb(55, 65, 81);</string>
                      <number>20</number>
                     </property>
                    </widget>
-                   <widget class="QPlainTextEdit" name="plainTextEdit_2">
+                   <widget class="QLabel" name="label_4">
                     <property name="geometry">
                      <rect>
-                      <x>530</x>
-                      <y>290</y>
-                      <width>104</width>
-                      <height>84</height>
+                      <x>290</x>
+                      <y>40</y>
+                      <width>231</width>
+                      <height>17</height>
                      </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Montserrat Medium</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Recovery Path</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                   <widget class="QTextEdit" name="textEdit_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>290</x>
+                      <y>70</y>
+                      <width>241</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(55, 65, 81);
+color: #ffffff;</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="tabChangesFocus">
+                     <bool>true</bool>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Select disk location</string>
                     </property>
                    </widget>
                   </widget>
@@ -1162,7 +1209,7 @@ background-color: rgb(55, 65, 81);</string>
                          <string>Ask AI for Help</string>
                         </property>
                         <property name="icon">
-                         <iconset>
+                         <iconset resource="resources.qrc">
                           <normaloff>:/icons/feather(2)/x-circle.svg</normaloff>:/icons/feather(2)/x-circle.svg</iconset>
                         </property>
                         <property name="iconSize">
@@ -1193,17 +1240,23 @@ background-color: rgb(55, 65, 81);</string>
                      <property name="styleSheet">
                       <string notr="true">background-color: #1f232a;</string>
                      </property>
-                     <widget class="QPlainTextEdit" name="chatOutput">
+                     <widget class="QPlainTextEdit" name="plainTextEdit">
                       <property name="geometry">
                        <rect>
-                        <x>33</x>
-                        <y>19</y>
-                        <width>241</width>
-                        <height>551</height>
+                        <x>23</x>
+                        <y>29</y>
+                        <width>251</width>
+                        <height>531</height>
                        </rect>
                       </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>300</height>
+                       </size>
+                      </property>
                      </widget>
-                     <widget class="QTextEdit" name="chatInput">
+                     <widget class="QTextEdit" name="textEdit">
                       <property name="geometry">
                        <rect>
                         <x>20</x>
@@ -1224,7 +1277,7 @@ color: white;
 border-radius: 25px;</string>
                       </property>
                      </widget>
-                     <widget class="QPushButton" name="chatSend">
+                     <widget class="QPushButton" name="pushButton">
                       <property name="geometry">
                        <rect>
                         <x>250</x>
@@ -1247,7 +1300,7 @@ background-color: black;</string>
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
+                       <iconset resource="resources.qrc">
                         <normaloff>:/icons/feather(2)/send.svg</normaloff>:/icons/feather(2)/send.svg</iconset>
                       </property>
                       <property name="iconSize">
@@ -1279,6 +1332,7 @@ background-color: black;</string>
  </widget>
  <resources>
   <include location="resources.qrc"/>
+  <include location="../../.designer/backup/resources.qrc"/>
  </resources>
  <connections/>
 </ui>
