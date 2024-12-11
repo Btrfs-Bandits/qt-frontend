@@ -621,8 +621,24 @@ class Ui_MainWindow(object):
         self.askAiBtn.setToolTip(_translate("MainWindow", "close menu"))
         self.askAiBtn.setText(_translate("MainWindow", "Ask AI for Help"))
 
-        self.startRecoverbtn.clicked.connect(utils.run_recover_script)
+        match self.fileTypesInputSelect.currentIndex():
+            case 0:
+                self.pattern = ".txt"
+            case 1:
+                self.pattern = ".tar"
+            case 2:
+                self.pattern = ".jpg"
+            case 3:
+                self.pattern = ".exe"
+            case 4:
+                self.pattern = ".py"
+            case 5:
+                self.pattern = ".db"
+            case 6:
+                self.pattern = ".*"
         
+        self.startRecoverbtn.clicked.connect(utils.run_recover_script(self.diskLocationInput.text(),self.recoveryPathInput.text(),self.pattern,"recover"))
+
 import resources
 
 if __name__ == "__main__":
