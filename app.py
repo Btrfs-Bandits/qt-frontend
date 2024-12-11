@@ -621,27 +621,29 @@ class Ui_MainWindow(object):
         self.askAiBtn.setToolTip(_translate("MainWindow", "close menu"))
         self.askAiBtn.setText(_translate("MainWindow", "Ask AI for Help"))
 
-        index = self.fileTypesInputSelect.currentIndex()
+        def paternFind(self):
+            index = self.fileTypesInputSelect.currentIndex()
 
-        if index == 0:
-            self.pattern = ".txt"
-        elif index == 1:
-            self.pattern = ".tar"
-        elif index == 2:
-            self.pattern = ".jpg"
-        elif index == 3:
-            self.pattern = ".exe"
-        elif index == 4:
-            self.pattern = ".py"
-        elif index == 5:
-            self.pattern = ".db"
-        elif index == 6:
-            self.pattern = ".*"
-        else:
-            self.pattern = "" 
+            if index == 0:
+                self.pattern = ".txt"
+            elif index == 1:
+                self.pattern = ".tar"
+            elif index == 2:
+                self.pattern = ".jpg"
+            elif index == 3:
+                self.pattern = ".exe"
+            elif index == 4:
+                self.pattern = ".py"
+            elif index == 5:
+                self.pattern = ".db"
+            elif index == 6:
+                self.pattern = ".*"
+            else:
+                self.pattern = "" 
+            return self.pattern
         
         self.startRecoverbtn.clicked.connect(lambda: utils.run_recover_script(
-            self.diskLocationInput.toPlainText(), self.recoveryPathInput.toPlainText(), self.pattern, "recover"))
+            self.diskLocationInput.toPlainText(), self.recoveryPathInput.toPlainText(), paternFind(self), "recover"))
 
 import resources
 
