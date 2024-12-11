@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import utils
 
 
 class Ui_MainWindow(object):
@@ -619,6 +620,9 @@ class Ui_MainWindow(object):
         self.label_10.setText(_translate("MainWindow", "Logs"))
         self.askAiBtn.setToolTip(_translate("MainWindow", "close menu"))
         self.askAiBtn.setText(_translate("MainWindow", "Ask AI for Help"))
+
+        self.startRecoverbtn.clicked.connect(utils.run_recover_script)
+        
 import resources
 
 if __name__ == "__main__":
