@@ -554,7 +554,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
         self.textEdit.setSizePolicy(sizePolicy)
         self.textEdit.setStyleSheet("background-color: #ffffff;\n"
-"color: white;\n"
+"color: black;\n"
 "border-radius: 25px;")
         self.textEdit.setObjectName("textEdit")
         self.pushButton = QtWidgets.QPushButton(self.AskAI)
