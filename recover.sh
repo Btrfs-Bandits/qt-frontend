@@ -13,6 +13,8 @@ dst=$2
 fileepath=$3
 mode=$4
 
+sudo umount $dev
+
 roots="/tmp/btrfsroots.tmp"
 depth=0
 tmp="/tmp/undeleter.tmp"
