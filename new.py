@@ -520,18 +520,8 @@ class Ui_MainWindow(object):
         self.AskAI.setMinimumSize(QtCore.QSize(300, 635))
         self.AskAI.setStyleSheet("background-color: #1f232a;")
         self.AskAI.setObjectName("AskAI")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.AskAI)
-        self.plainTextEdit.setGeometry(QtCore.QRect(70, 110, 104, 70))
-        self.plainTextEdit.setObjectName("plainTextEdit")
-        self.chatOutput = QtWidgets.QFrame(self.AskAI)
-        self.chatOutput.setGeometry(QtCore.QRect(39, 29, 231, 531))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.chatOutput.sizePolicy().hasHeightForWidth())
-        self.chatOutput.setSizePolicy(sizePolicy)
-        self.chatOutput.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.chatOutput.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.chatOutput = QtWidgets.QPlainTextEdit(self.AskAI)
+        self.chatOutput.setGeometry(QtCore.QRect(33, 19, 241, 551))
         self.chatOutput.setObjectName("chatOutput")
         self.chatInput = QtWidgets.QTextEdit(self.AskAI)
         self.chatInput.setGeometry(QtCore.QRect(20, 589, 271, 51))
@@ -606,6 +596,7 @@ class Ui_MainWindow(object):
         self.pushButton_9.setToolTip(_translate("MainWindow", "close menu"))
         self.pushButton_9.setText(_translate("MainWindow", "Ask AI for Help"))
 
+
         self.chatSend.clicked.connect(self.handleChatSend)
 
     def handleChatSend(self):
@@ -634,6 +625,7 @@ class Ui_MainWindow(object):
         except Exception as e:
             self.chatOutput.setText(f"An error occurred: {str(e)}")
 
+import resources
 
 
 if __name__ == "__main__":
