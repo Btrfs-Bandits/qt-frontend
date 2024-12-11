@@ -231,7 +231,7 @@ function recover(){
   titler "Undelete-BTRFS | Recovering files | Depth-level: ${depth}"
   if [[ $depth = "0" ]]; then
     printf "Attempting recovery at depth level ${blue}%s${normal}, note that this may take a while..." "$depth"
-    btrfs restore -ivv --path-regex '^/'${regex}'$' "$dev" "$dst"  &> /dev/null &
+    btrfs restore -ivv -m --path-regex '^/'${regex}'$' "$dev" "$dst"  &> /dev/null &
     spinner
     recoveredfiles=$(find "$dst" ! -empty -type f | wc -l)
     printf "${green}Done${normal}! \n"
@@ -240,7 +240,7 @@ function recover(){
   elif [[ $depth == "1" ]]; then
     printf "Attempting recovery at depth level ${blue}%s${normal} with a root count of ${blue}%s${normal}, note that this may take a while..." "$depth" "$rootcount"
     while read -r i || [[ -n "$i" ]]; do
-      btrfs restore -t "$i" -ivv --path-regex '^/'${regex}'$' "$dev" "$dst" &> /dev/null
+      btrfs restore -t "$i" -ivv -m --path-regex '^/'${regex}'$' "$dev" "$dst" &> /dev/null
     done < "$roots" &
     spinner
     printf "${green}Done${normal}! \n"
@@ -250,7 +250,7 @@ function recover(){
   elif [[ $depth == "2" ]]; then
     printf "\n${yellow}NOTE:${normal} You are about to start recovery at the deepest level. \nThis may take a long time and it's possible that console will get flooded with '(core dumped)'-messages.\nThis is normal and can be ignored.\n\n"    printf "Attempting recovery at depth level ${blue}%s${normal} with a root count of ${blue}%s${normal}, note that this may take a while..." "$depth" "$rootcount"
     while read -r i || [[ -n "$i" ]]; do
-      btrfs restore -t "$i" -ivv --path-regex '^/'${regex}'$' "$dev" "$dst" &> /dev/null
+      btrfs restore -t "$i" -ivv -m --path-regex '^/'${regex}'$' "$dev" "$dst" &> /dev/null
       find "$dst" -empty -type f -delete
     done < "$roots" &
     spinner
