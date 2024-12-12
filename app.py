@@ -489,16 +489,9 @@ class Ui_MainWindow(object):
         self.recoveryBtnInput.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.recoveryBtnInput.setTabChangesFocus(True)
         self.recoveryBtnInput.setObjectName("recoveryBtnInput")
-        self.progressBar = QtWidgets.QProgressBar(self.page)
-        self.progressBar.setGeometry(QtCore.QRect(40, 360, 451, 21))
         font = QtGui.QFont()
         font.setFamily("Montserrat Light")
         font.setPointSize(12)
-        self.progressBar.setFont(font)
-        self.progressBar.setStyleSheet("alternate-background-color: rgb(37, 99, 235);\n"
-"background-color: rgb(55, 65, 81);")
-        self.progressBar.setProperty("value", 20)
-        self.progressBar.setObjectName("progressBar")
         self.Window.addWidget(self.page)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
@@ -630,7 +623,6 @@ class Ui_MainWindow(object):
         self.closeBtn.setToolTip(_translate("MainWindow", "CloseWindow"))
         self.introheader.setText(_translate("MainWindow", "This is a file-recovery software."))
         self.Analysinglabel.setText(_translate("MainWindow", "Analysing..."))
-        self.RecoveryLabel.setText(_translate("MainWindow", "Recovery in progress..."))
         self.SummaryLabel.setText(_translate("MainWindow", "Summary of recovered files"))
         self.DiskLocationLabel.setText(_translate("MainWindow", "Disk Location"))
         self.diskLocationInput.setPlaceholderText(_translate("MainWindow", "Select disk location"))
@@ -682,7 +674,7 @@ class Ui_MainWindow(object):
 
 
         def paternFind(self):
-            index = self.fileTypesInputSelect.currentIndex()
+            index = self.comboBox.currentIndex()
 
             if index == 0:
                 self.pattern = ".txt"
@@ -700,10 +692,10 @@ class Ui_MainWindow(object):
                 self.pattern = ".*"
             else:
                 self.pattern = "" 
-            return self.patterns
+            return self.pattern
 
         self.StartBtn.clicked.connect(lambda: utils.run_btrfs_recover_script(
-            self.diskLocationInput.toPlainText(), self.recoveryPathInput.toPlainText(), paternFind(self), "recover"))
+            self.diskLocationInput.toPlainText(), self.recoveryBtnInput.toPlainText(), paternFind(self), "recover"))
 import resources
 
 if __name__ == "__main__":
