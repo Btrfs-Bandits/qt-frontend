@@ -12,6 +12,7 @@ import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from groq import Groq 
 import utils
+import os
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -714,8 +715,6 @@ class Ui_MainWindow(object):
         self.StartBtn.clicked.connect(lambda: utils.run_recover_script(
             self.diskLocationInput.toPlainText(), self.recoveryPathInput.toPlainText(), paternFind(self), "recover"))
 import resources
-
-
 
 if __name__ == "__main__":
     import sys

@@ -229,6 +229,7 @@ function checkrecoverresults(){
     printf "========\n\n"
   fi
   ./report-gen.sh $dst
+  mv report.md $dst
 }
 
 #Exec start
