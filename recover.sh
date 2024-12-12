@@ -230,6 +230,7 @@ function checkrecoverresults(){
   fi
   ./report-gen.sh -t $dst
   mv report.md $dst
+  printf "Report generated in ${blue}%s/report.md${normal}\n" "$dst"
 }
 
 #Exec start
