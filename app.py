@@ -672,7 +672,7 @@ class Ui_MainWindow(object):
                 self.pattern = "" 
             return self.pattern
         
-        self.startRecoverbtn.clicked.connect(lambda: utils.run_recover_script(
+        self.startRecoverbtn.clicked.connect(lambda: utils.run_btrfs_recover_script(
             self.diskLocationInput.toPlainText(), self.recoveryPathInput.toPlainText(), paternFind(self), "recover"))
 
 import resources
