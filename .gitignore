@@ -3,3 +3,4 @@ __pycache__/
 /recovered
 output.txt
 venv/
+report.md

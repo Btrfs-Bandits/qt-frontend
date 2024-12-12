@@ -228,6 +228,7 @@ function checkrecoverresults(){
     find "$dst" -type f | head -n20
     printf "========\n\n"
   fi
+  ./report-gen.sh $dst
 }
 
 #Exec start
